@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	// Declare and Initialize variables
+	double x1 = 1, y1(5), x2(4), y2 = 7,
+		side1 = 0, side2 = 0, distance = 0;
+
+	// promt the user to enter x1 value
+	cout << "Enter x1 value: ";
+	cin >> x1;
+
+	// promt the user to enter x2 value
+	cout << "Enter x2 value: ";
+	cin >> x2;
+
+	// promt the user to enter y1 value
+	cout << "Enter y1 value: ";
+	cin >> y1;
+
+	// promt the user to enter y2 value
+	cout << "Enter y2 value: ";
+	cin >> y2;
+
+	// Compute the sides of the triangle
+	side1 = x2 - x1;
+	side2 = y2 - y1;
+
+	// Calculate distance
+	distance = sqrt(side1*side1 + pow(side2, 2.0));
+
+	// Print the distance
+	cout << "The distance between points (" << x1 << ',' << y1
+		<< ") and (" << x2 << ',' << y2 << ") is "<<distance<<endl;
+	
+	// Print the perimeter
+	cout << "The perimeter of the triangle is " << distance + side1 + side2 << endl;
+	return 0; // indicate that the program ended successfully
+
+} // end function main
